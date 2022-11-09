@@ -20,14 +20,13 @@ public class InstancesTrack {
             instancesTrack[j]=null;
 
         }
-        System.out.println("Object Created"+(numberOfObject));
-        System.out.println("Destoyed Object"+(instancesDeletion));
+        System.out.println("Object Created : "+(numberOfObject));
+        System.out.println("Destoyed Object : "+(instancesDeletion));
+        System.out.println("Alive Objects : "+(numberOfObject-instancesDeletion));
         System.gc();
 
     }
     protected void finalize()throws Throwable{
-        count--;
-        System.out.println("\nAlived objects are : "+count);
 
     }
 
