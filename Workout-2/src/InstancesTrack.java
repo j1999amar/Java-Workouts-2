@@ -22,6 +22,7 @@ public class InstancesTrack {
 
         }
         System.gc();
+        System.out.println("Destoyed Object"+(instancesDeletion));
     }
     protected void finalize()throws Throwable{
         count--;
