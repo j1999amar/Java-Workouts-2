@@ -3,7 +3,6 @@ public class InstancesTrack {
     static int count = 0;
     InstancesTrack() {
         count++;
-        System.out.println("object created : "+count);
     }
 
     public static void main(String[] args) {
@@ -21,8 +20,10 @@ public class InstancesTrack {
             instancesTrack[j]=null;
 
         }
-        System.gc();
+        System.out.println("Object Created"+(numberOfObject));
         System.out.println("Destoyed Object"+(instancesDeletion));
+        System.gc();
+
     }
     protected void finalize()throws Throwable{
         count--;
